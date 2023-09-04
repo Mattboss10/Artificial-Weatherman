@@ -85,7 +85,7 @@ void handleRoot() {
   page += "&deg;C</span></p>";
   page += "<p>Humidity: ";
   page += humidity;
-  page += "%</p>";
+  page += "%Rh</p>"; // Updated humidity format
   page += "<h3>Artificial Weatherman:</h3>";
   page += "<p>";
   page += getArtificialWeatherman();
