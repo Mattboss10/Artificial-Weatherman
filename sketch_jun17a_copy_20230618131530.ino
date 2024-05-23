@@ -25,8 +25,8 @@ void setup() {
   dht.setup(DHTPIN, DHTesp::DHT11);
 }
 
-void getTemperature(); // Function declaration
-void getHumidity(); // Function declaration
+void getTemperature(); // delcarting function to get temp
+void getHumidity(); // Declaring function to get humidity
 
 void loop() {
   server.handleClient();
@@ -37,7 +37,7 @@ void loop() {
   delay(1000);
 }
 
-void connectToWifi() {
+void connectToWifi() { 
   WiFi.enableSTA(true);
   delay(2000);
 
@@ -79,13 +79,13 @@ void handleRoot() {
   }
   page += "; }</style>";
   page += "</head><body>";
-  page += "<h1>Temperature and Humidity Monitor</h1>"; // Updated title
+  page += "<h1>Temperature and Humidity Monitor</h1>"; 
   page += "<p>Temperature: <span id='temp'>";
   page += temperature;
   page += "&deg;C</span></p>";
   page += "<p>Humidity: ";
   page += humidity;
-  page += "%Rh</p>"; // Updated humidity format
+  page += "%Rh</p>"; // 
   page += "<h3>Artificial Weatherman:</h3>";
   page += "<p>";
   page += getArtificialWeatherman();
@@ -102,7 +102,7 @@ void getTemperature() {
 void getHumidity() {
   humidity = dht.getHumidity();
 }
-
+//adding conditional statements based on atmospheric conditions
 String getArtificialWeatherman() {
   if (temperature > 30 && humidity > 80) {
     return "Oh man, it's hot and very humid today. Better crank up that AC!";
