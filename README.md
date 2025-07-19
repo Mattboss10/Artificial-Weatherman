@@ -1,0 +1,1 @@
+This mini project makes use of an ESP32 Microcontroller board and a DHT11 Sensor that when connected to the internet displays the temperature and humidity of the surrounding environment. To spice things up a bit, I added an 'articial weatherman' that makes comments based on the atmospheric conditions. 
